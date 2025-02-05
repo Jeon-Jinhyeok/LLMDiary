@@ -1,8 +1,48 @@
-# LLM 감정 분석 다이어리
+# LLM Diary
 
-## 프로젝트 개요
+<!--배지-->
+![Apache 2.0][license-shield] <img src="https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"/>
+
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/ebe90fd9-00ee-4ded-bbbd-af419bcd822f" width=50%; >
+</p>
+
+<!--목차-->
+# Table of Contents
+- [[1] About the Project](#1-about-the-project)
+  - [Features](#features)
+  - [Technologies](#technologies)
+- [[2] Getting Started](#2-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+- [[3] Usage](#3-usage)
+- [[4] Contact](#4-contact)
+- [[5] License](#5-license)
+
+# [1] About the Project
 거대 언어 모델(LLM)을 사용하여 사용자의 일기를 바탕으로 감정을 분석하고, 사용자에게 통계 및 맞춤형 상담을 제안하는 시스템. 
+## Features 
+* 강조하고싶은 **주요 기능**이나 **차별성 있는 특징**
  
+## Technologies
+ [Python](https://www.python.org) 3.10.0
+ [Django](https://www.djangoproject.com/) 5.1.3
+ [tailwindcss](https://tailwindcss.com/) 3.4.14
+ [transformers](https://huggingface.co/docs/transformers/ko/index) 4.47.0
+ 
+# [2] Getting Started
+
+# [3] Usage
+스크린샷, 코드 등을 통해 사용 방법과 사용 예제를 보여기. 사용 예제별로 h2 헤더로 나누어 설명
+
+# [4] Contact
+- 📧 [Jinhyeok, JEON](https://github.com/Jeon-Jinhyeok) aqwstn@gmail.com
+- 📧 []()
+
+# [5] License
+Apache 2.0
+
 ---
 
 ## 주요 기능
@@ -25,12 +65,19 @@
 
 ---
 
+### 감정 분석
+- **Model**: [koBERT](https://huggingface.co/monologg/kobert). 
+- **Fine-tuning Dataset**:  [감성대화 말뭉치](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=86)
+- **Emotion** : 분노, 슬픔, 불안, 상처, 당황, 기쁨
+
 ## 주요 기술
 ### 백엔드
 - **Django**: 서버 및 데이터베이스 관리.
 - **PostgreSQL**: 데이터 저장 및 관리.
 - **Django ORM**: PostgreSQL과의 연동 및 데이터 처리.
-- 
-### 감정 분석
-- **koBERT**: 감정 분석 모델로 한국어에 최적화된 BERT 모델을 사용. 사용자의 일기 데이터를 기반으로 분노, 슬픔, 불안, 상처, 당황, 기쁨으로 감정 분류를 수행
-- **Fine-tuning**:  koBERT 파인튜닝을 위해 AI HUB의 감성대화 말뭉치 사용(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=86)
+
+
+<!--Url for Badges-->
+[license-shield]: https://img.shields.io/badge/license-Apache%202.0-blue?style=round
+[repository-size-shield]: https://img.shields.io/github/repo-size/dev-ujin/readme-template?labelColor=D8D8D8&color=BE81F7
+[django-shield]: "https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"

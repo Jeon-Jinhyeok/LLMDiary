@@ -1,7 +1,7 @@
 # LLM Diary
 
 <!--배지-->
-![Apache 2.0][license-shield] <img src="https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"/>
+![Apache 2.0][license-shield] <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"/> <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" width=10%>
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/ebe90fd9-00ee-4ded-bbbd-af419bcd822f" width=50%; >

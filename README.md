@@ -26,10 +26,10 @@
 * 강조하고싶은 **주요 기능**이나 **차별성 있는 특징**
  
 ## Technologies
- [Python](https://www.python.org) 3.10.0
- [Django](https://www.djangoproject.com/) 5.1.3
- [tailwindcss](https://tailwindcss.com/) 3.4.14
- [transformers](https://huggingface.co/docs/transformers/ko/index) 4.47.0
+ - [Python](https://www.python.org) 3.10.0
+ - [Django](https://www.djangoproject.com/) 5.1.3
+ - [tailwindcss](https://tailwindcss.com/) 3.4.14
+ - [transformers](https://huggingface.co/docs/transformers/ko/index) 4.47.0
  
 # [2] Getting Started
 

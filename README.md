@@ -35,7 +35,8 @@
  - [transformers](https://huggingface.co/docs/transformers/ko/index) 4.47.0
  
 ## 🛠 Getting Started
-### 0️⃣ Pre-requisites
+The easiest way to start the LLMDiary is through docker compose. Before running this with the following commands, make sure that Docker and Docker Compose are installed on your machine:
+
 ### 1️⃣ 프로젝트 클론
 ```bash
 git clone https://github.com/Jeon-Jinhyeok/LLMDiary.git

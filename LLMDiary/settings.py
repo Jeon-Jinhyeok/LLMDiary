@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, "setup.env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -25,8 +29,7 @@ SECRET_KEY = "django-insecure-)+@@p(81nhykv&+w0123qem^007xok=+1wa@7vw8w5_*-20)$i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
 
 # Application definition
 
@@ -85,14 +88,13 @@ WSGI_APPLICATION = "LLMDiary.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "emotion_diary_db",
-        "USER": "admin",
-        "PASSWORD": "161106",
-        "HOST": "localhost",
-        "PORT": "5432",
+        "NAME": env("POSTGRES_DB", default="emotion_diary_db"),
+        "USER": env("POSTGRES_USER", default="admin"),
+        "PASSWORD": env("POSTGRES_PASSWORD", default="161106"),
+        "HOST": env("POSTGRES_HOST", default="db"),  # ✅ 'localhost' 대신 'db' 사용
+        "PORT": env("POSTGRES_PORT", default="5432"),  # ✅ Docker 내부 네트워크 사용
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -105,8 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
         }
     }
 ]
-
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -122,8 +122,6 @@ TIME_ZONE = 'Asia/Seoul'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -136,6 +134,10 @@ AUTHENTICATION_BACKENDS = [
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# MEDIA FILES
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 AUTH_USER_MODEL = 'accounts.Person'
 

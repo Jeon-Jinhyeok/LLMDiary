@@ -18,7 +18,7 @@ import random
 bertmodel = BertModel.from_pretrained('skt/kobert-base-v1', return_dict=False)
 model = BERTClassifier(bertmodel, hidden_size=768, num_classes=6, dr_rate=0.5)
 save_path = "./koBERT-emotion/bert_classifier_model.pt"
-state_dict = torch.load(save_path, map_location=torch.device('cpu'))
+state_dict = torch.load(save_path, map_location=torch.device('cpu'), weights_only=True)
 model.load_state_dict(state_dict)
 model.eval()
 print("Model loaded successfully")

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: emotion_diary_db
+    restart: always
+    env_file: setup.env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    container_name: emotion_diary_backend
+    restart: always
+    depends_on:
+      - db
+    env_file: setup.env
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+
+volumes:
+  pgdata:

@@ -1,46 +1,84 @@
-# LLM Diary
+# 📖 LLM Diary: 감정 분석 기반 다이어리 플랫폼
 
 <!--배지-->
-![Apache 2.0][license-shield] <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"/> <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" width=10%>
+![Apache 2.0][license-shield] 
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-5.1-lightblue?logo=django&logoColor=white&labelColor=green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql&logoColor=Blue&labelColor=Blue)
+[![Hugging Face Model](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/xxhyeok/koBERT-emotion)
+![Docker](https://img.shields.io/badge/Docker-Supported-blue?style=flat&logo=docker&logoColor=white&labelColor=black)
 
+<!--Project LOGO-->
 <p align="center">
- <img src="https://github.com/user-attachments/assets/ebe90fd9-00ee-4ded-bbbd-af419bcd822f" width=50%; >
+ <img src="https://github.com/user-attachments/assets/ebe90fd9-00ee-4ded-bbbd-af419bcd822f" width=60%; >
 </p>
 
 <!--목차-->
 # Table of Contents
-- [[1] About the Project](#1-about-the-project)
-  - [Features](#features)
-  - [Technologies](#technologies)
-- [[2] Getting Started](#2-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-- [[3] Usage](#3-usage)
-- [[4] Contact](#4-contact)
-- [[5] License](#5-license)
+- [📌 About the Project](about-the-project)
+- [🚀 Features](features)
+- [💻 Technologies](technologies)
+- [🛠 Getting Started](#-getting-started)
+- [Usage](#usage)
+- [Contact](contact)
+- [License](#-license)
 
-# [1] About the Project
-거대 언어 모델(LLM)을 사용하여 사용자의 일기를 바탕으로 감정을 분석하고, 사용자에게 통계 및 맞춤형 상담을 제안하는 시스템. 
-## Features 
+## 📌 About the Project
+거대 언어 모델(LLM)을 사용하여 사용자의 일기를 바탕으로 감정을 분석하고, 사용자에게 감정 통계 및 맞춤형 상담을 제안하는 시스템.
+## 🚀 Features 
 * 강조하고싶은 **주요 기능**이나 **차별성 있는 특징**
  
-## Technologies
+## 💻 Technologies
  - [Python](https://www.python.org) 3.10.0
  - [Django](https://www.djangoproject.com/) 5.1.3
  - [tailwindcss](https://tailwindcss.com/) 3.4.14
  - [transformers](https://huggingface.co/docs/transformers/ko/index) 4.47.0
  
-# [2] Getting Started
+## 🛠 Getting Started
+### 0️⃣ Pre-requisites
+### 1️⃣ 프로젝트 클론
+```bash
+git clone https://github.com/Jeon-Jinhyeok/LLMDiary.git
+cd LLMDiary
+```
+### 2️⃣ 모델 다운로드 (Hugging Face)
+```bash
+git lfs clone https://huggingface.co/xxhyeok/koBERT-emotion
+```
+### 3️⃣ 환경 변수 설정(setup.env)
+- setup.env파일 수정
+ ```ini
+ POSTGRES_DB=emotion_diary_db
+ POSTGRES_USER=admin
+ POSTGRES_PASSWORD=your-password
+ POSTGRES_HOST=db
+ POSTGRES_PORT=5432
+ DJANGO_SECRET_KEY=your-secret-key
+ DEBUG=False
+ ALLOWED_HOSTS=*
+ ```
+- setup.env 파일 적용
+ ```bash
+ source ./setup.env
+ ```
 
-# [3] Usage
+### 4️⃣ Docker로 실행
+```bash
+docker compose up
+```
+### 5️⃣ 웹페이지 접속
+```plaintext
+http://localhost:8000
+```
+
+## Usage
 스크린샷, 코드 등을 통해 사용 방법과 사용 예제를 보여기. 사용 예제별로 h2 헤더로 나누어 설명
 
-# [4] Contact
-- 📧 [Jinhyeok, JEON](https://github.com/Jeon-Jinhyeok) aqwstn@gmail.com
-- 📧 []()
+## 📧 Contact
+- [Jinhyeok, JEON](https://github.com/Jeon-Jinhyeok) aqwstn@gmail.com
+- []()
 
-# [5] License
+## 📜 License
 Apache 2.0
 
 ---

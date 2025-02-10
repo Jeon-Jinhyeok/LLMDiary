@@ -5,6 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-5.1-lightblue?logo=django&logoColor=white&labelColor=green)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql&logoColor=Blue&labelColor=Blue)
+![License][license-shield] ![TailwindCSS][tailwind-shield]
 [![Hugging Face Model](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/xxhyeok/koBERT-emotion)
 ![Docker](https://img.shields.io/badge/Docker-Supported-blue?style=flat&logo=docker&logoColor=white&labelColor=black)
 
@@ -14,18 +15,34 @@
 </p>
 
 <!--목차-->
-# Table of Contents
-- [📌 About the Project](about-the-project)
-- [🚀 Features](features)
-- [💻 Technologies](technologies)
+## 📌 Table of Contents
+- [📌 About the Project](#📌-about-the-project)
+- [🚀 Features](#-features)
+- - [📊 Emotion Analysis](#📊-emotion-analysis)
+- [💻 Technologies](#-technologies)
 - [🛠 Getting Started](#-getting-started)
-- [Usage](#usage)
-- [Contact](contact)
-- [License](#-license)
+
+- [📌 Usage](#-usage)
+- [📧 Contact](#-contact)
+- [📜 License](#-license)
 
 ## 📌 About the Project
 거대 언어 모델(LLM)을 사용하여 사용자의 일기를 바탕으로 감정을 분석하고, 사용자에게 감정 통계 및 맞춤형 상담을 제안하는 시스템.
+
 ## 🚀 Features 
+### ROLE
+- **User**
+- **Counselor**
+- **Admin**
+- **UserSupporter**
+
+### 📊 Emotion Analsis
+- **Model**: [koBERT](https://huggingface.co/monologg/kobert). 
+- **Fine-tuning Dataset**:  [감성대화 말뭉치](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=86)
+- **Emotion** : 분노, 슬픔, 불안, 상처, 당황, 기쁨
+
+###
+
 * 강조하고싶은 **주요 기능**이나 **차별성 있는 특징**
  
 ## 💻 Technologies
@@ -35,18 +52,23 @@
  - [transformers](https://huggingface.co/docs/transformers/ko/index) 4.47.0
  
 ## 🛠 Getting Started
-The easiest way to start the LLMDiary is through docker compose. Before running this with the following commands, make sure that Docker and Docker Compose are installed on your machine:
+### 0️⃣ Pre-requisite
+The easiest way to start the LLMDiary is through **docker compose**. Before running this with the following commands, make sure that [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/install/) are installed on your machine:
 
-### 1️⃣ 프로젝트 클론
+
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/Jeon-Jinhyeok/LLMDiary.git
 cd LLMDiary
 ```
-### 2️⃣ 모델 다운로드 (Hugging Face)
+### 2️⃣ Download the Model (Hugging Face)
 ```bash
+sudo apt install git-lfs
 git lfs clone https://huggingface.co/xxhyeok/koBERT-emotion
 ```
-### 3️⃣ 환경 변수 설정(setup.env)
+> 💡 **참고:** Hugging Face 모델 저장소에 접근하려면 SSH를 이용한 로그인 인증이 필요할 수 있습니다.
+> 
+### 3️⃣ Configure Environment Variables
 - setup.env파일 수정
  ```ini
  POSTGRES_DB=emotion_diary_db
@@ -63,21 +85,21 @@ git lfs clone https://huggingface.co/xxhyeok/koBERT-emotion
  source ./setup.env
  ```
 
-### 4️⃣ Docker로 실행
+### 4️⃣ Run with Docker
 ```bash
 docker compose up
 ```
-### 5️⃣ 웹페이지 접속
+### 5️⃣ Access the Web Interface
 ```plaintext
 http://localhost:8000
 ```
 
-## Usage
+## 📌 Usage
 스크린샷, 코드 등을 통해 사용 방법과 사용 예제를 보여기. 사용 예제별로 h2 헤더로 나누어 설명
 
 ## 📧 Contact
-- [Jinhyeok, JEON](https://github.com/Jeon-Jinhyeok) aqwstn@gmail.com
-- []()
+- [Jinhyeok, JEON](https://github.com/Jeon-Jinhyeok) - aqwstn@gmail.com
+- [Donggeon, KIM](https://github.com/ehdrjs6831) - 
 
 ## 📜 License
 Apache 2.0
@@ -104,19 +126,8 @@ Apache 2.0
 
 ---
 
-### 감정 분석
-- **Model**: [koBERT](https://huggingface.co/monologg/kobert). 
-- **Fine-tuning Dataset**:  [감성대화 말뭉치](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=86)
-- **Emotion** : 분노, 슬픔, 불안, 상처, 당황, 기쁨
-
-## 주요 기술
-### 백엔드
-- **Django**: 서버 및 데이터베이스 관리.
-- **PostgreSQL**: 데이터 저장 및 관리.
-- **Django ORM**: PostgreSQL과의 연동 및 데이터 처리.
-
-
 <!--Url for Badges-->
 [license-shield]: https://img.shields.io/badge/license-Apache%202.0-blue?style=round
 [repository-size-shield]: https://img.shields.io/github/repo-size/dev-ujin/readme-template?labelColor=D8D8D8&color=BE81F7
 [django-shield]: "https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"
+[tailwind-shield]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white

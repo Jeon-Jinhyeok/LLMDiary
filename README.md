@@ -16,16 +16,15 @@
 
 <!--목차-->
 ## 📌 Table of Contents
-- [📌 About the Project](#-about-the-project)
+- [🔍 About the Project](#-about-the-project)
 - [🚀 Features](#-features)
-- - [📊 Emotion Analysis](#-emotion-analysis)
 - [💻 Technologies](#-technologies)
 - [🛠 Getting Started](#-getting-started)
 - [📌 Usage](#-usage)
 - [📧 Contact](#-contact)
 - [📜 License](#-license)
 
-## 📌 About the Project
+## 🔍 About the Project
 거대 언어 모델(LLM)을 사용하여 사용자의 일기를 바탕으로 감정을 분석하고, 사용자에게 감정 통계 및 맞춤형 상담을 제안하는 시스템.
 
 ## 🚀 Features 
@@ -66,7 +65,7 @@ sudo apt install git-lfs
 git lfs clone https://huggingface.co/xxhyeok/koBERT-emotion
 ```
 > 💡 **참고:** Hugging Face 모델 저장소에 접근하려면 SSH를 이용한 로그인 인증이 필요할 수 있습니다.
-> 
+> [Hugging Face SSH Key 설정 가이드](https://huggingface.co/docs/hub/security-tokens) 참고
 ### 3️⃣ Configure Environment Variables
 - setup.env파일 수정
  ```ini

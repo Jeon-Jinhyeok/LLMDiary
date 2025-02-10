@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-5.1-lightblue?logo=django&logoColor=white&labelColor=green)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql&logoColor=Blue&labelColor=Blue)
-![License][license-shield] ![TailwindCSS][tailwind-shield]
+![TailwindCSS][tailwind-shield]
 [![Hugging Face Model](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/xxhyeok/koBERT-emotion)
 ![Docker](https://img.shields.io/badge/Docker-Supported-blue?style=flat&logo=docker&logoColor=white&labelColor=black)
 
@@ -16,12 +16,11 @@
 
 <!--목차-->
 ## 📌 Table of Contents
-- [📌 About the Project](#📌-about-the-project)
+- [📌 About the Project](#-about-the-project)
 - [🚀 Features](#-features)
-- - [📊 Emotion Analysis](#📊-emotion-analysis)
+- - [📊 Emotion Analysis](#-emotion-analysis)
 - [💻 Technologies](#-technologies)
 - [🛠 Getting Started](#-getting-started)
-
 - [📌 Usage](#-usage)
 - [📧 Contact](#-contact)
 - [📜 License](#-license)
@@ -30,8 +29,8 @@
 거대 언어 모델(LLM)을 사용하여 사용자의 일기를 바탕으로 감정을 분석하고, 사용자에게 감정 통계 및 맞춤형 상담을 제안하는 시스템.
 
 ## 🚀 Features 
-### ROLE
-- **User**
+### 🏷️ROLE
+- **User** 
 - **Counselor**
 - **Admin**
 - **UserSupporter**
@@ -41,7 +40,7 @@
 - **Fine-tuning Dataset**:  [감성대화 말뭉치](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=86)
 - **Emotion** : 분노, 슬픔, 불안, 상처, 당황, 기쁨
 
-###
+### Counsel
 
 * 강조하고싶은 **주요 기능**이나 **차별성 있는 특징**
  
@@ -103,7 +102,6 @@ http://localhost:8000
 
 ## 📜 License
 Apache 2.0
-
 ---
 
 ## 주요 기능

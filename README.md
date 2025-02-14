@@ -110,6 +110,8 @@ http://localhost:8000
 
  - Diary Details with Result of Emotion Analysis and Recommended Action
  - You can edit or delete the written diary.
+   
+---
 
 ### Home
 <img width="1646" alt="image" src="https://github.com/user-attachments/assets/3619b25a-4800-4308-81cb-81d17434863f" />

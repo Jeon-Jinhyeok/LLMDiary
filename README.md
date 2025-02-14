@@ -39,10 +39,10 @@
 - **Fine-tuning Dataset**:  [감성대화 말뭉치](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=86)
 - **Emotion** : 분노, 슬픔, 불안, 상처, 당황, 기쁨
 
-### Counsel
+### 🏥 Counsel
+- User can request a consultation, view connselor info
+- Counselor can schedule, conduct, suggest consultations.
 
-* 강조하고싶은 **주요 기능**이나 **차별성 있는 특징**
- 
 ## 💻 Technologies
  - [Python](https://www.python.org) 3.10.0
  - [Django](https://www.djangoproject.com/) 5.1.3
@@ -93,7 +93,29 @@ http://localhost:8000
 ```
 
 ## 📌 Usage
-스크린샷, 코드 등을 통해 사용 방법과 사용 예제를 보여기. 사용 예제별로 h2 헤더로 나누어 설명
+
+### Login Page
+<img width="1310" alt="image" src="https://github.com/user-attachments/assets/ee90d531-a7ab-4ec9-9718-c9f5eb6128ba" />
+
+---
+
+### Diary List with Representative emotion
+<img alt="image" src="https://github.com/user-attachments/assets/6fb9c4d8-390d-4ef0-a2e4-b312338900fe" />
+
+---
+
+### Diary Details
+
+<img alt="image" src="https://github.com/user-attachments/assets/d681b426-edfa-45c2-8c28-2249c0099bbc" />
+
+ - Diary Details with Result of Emotion Analysis and Recommended Action
+ - You can edit or delete the written diary.
+
+### Home
+<img width="1646" alt="image" src="https://github.com/user-attachments/assets/3619b25a-4800-4308-81cb-81d17434863f" />
+
+- You can check latest Diaries in Home
+- You can check emotional statistics for one week.
 
 ## 📧 Contact
 - [Jinhyeok, JEON](https://github.com/Jeon-Jinhyeok) - aqwstn@gmail.com
